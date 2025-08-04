@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎉 Happy Birthday, My Love!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Comic Sans MS', cursive;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .scene {
+      width: 350px;
+      height: 450px;
+      perspective: 1000px;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+    }
+
+    .card.flip {
+      transform: rotateY(180deg);
+    }
+
+    .side {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      backface-visibility: hidden;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .front {
+      background: #fff3f8;
+    }
+
+    .back {
+      transform: rotateY(180deg);
+      background: #ffeef1;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ff1493;
+    }
+
+    }
+
+    h2 {
+        color: #ff1493;
+    }
+
+    p {
+      color: #444;
+      font-size: 16px;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .emoji {
+      font-size: 28px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="scene">
+  <div class="card" id="card">
+    <!-- 🎁 Front of Card -->
+    <div class="side front">
+      <h2>🎉 Happy Birthday Babe! 💖</h2>
+      <p class="emoji">🎂🎈💌</p>
+      <button class="btn" onclick="flipCard()">Open Your Gift 🎁</button>
+    </div>
+
+    <!-- 💌 Inside the Card -->
+    <div class="side back">
+      "My Love Taha">
+      <h2>You're My Favorite Human 💕</h2>
+      <p>You're the peanut butter to my jelly, the Netflix to my chill, and the WiFi to my soul.You are the sexy gf. You are my life. IloveYou Bby Taha my panda😘</p>
+      <p class="emoji">💘🌹🥰</p>
+      </audio>
+    </div>
+  </div>
+</div>
+
+<script>
+  function flipCard() {
+    document.getElementById('card').classList.toggle('flip');
+  }
+</script>
+
+</body>
+</html>
